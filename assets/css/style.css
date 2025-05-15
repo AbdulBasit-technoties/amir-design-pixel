@@ -51,76 +51,54 @@ h6 {
   color: white;
   background: var(--blue);
 }
-/* Header Css Start */
-.design-img img {
-  width: 50%;
-}
-.header {
-  z-index: 2;
-  top: 10px;
+
+
+header{
+      position: absolute;
+       width: 100%;
 }
 
-.design-menu {
-  font-size: 16px;
+
+.banner-section{
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    background-image: url(../image/banner.jpg);
+    background-size: cover;
 }
+
+
+.design-menu ul li a::before{
+    content: "";
+    position: absolute;
+    left: -100%;
+    width: 100%;
+    bottom: 0;
+    height: 3px;
+    background-color: white;
+    transition: all 0.5s ease;
+}
+
+.design-menu ul li a:hover::before {
+    left: 0;
+}
+.banner-content h1{
+  font-size: 80px;
+}
+
+
 .design-button a{
-  background-color: var(--blue);
-}
-.design-menu ul li a::before {
-  left: -100%;
-  width: 100%;
-  position: absolute;
-  content: "";
-  bottom: 0;
-  height: 4px;
-  background-color: #fff;
-  transition: all 0.5s ease;
-}
-.design-menu ul li:hover a::before {
-  left: 0;
-}
-.design-menu ul li:hover a {
-  color: white;
-}
-.design-button a::before {
-  position: absolute;
-  top: 0;
-  left: -100%;
-  content: "";
-  background-color: #fff;
-  width: 100%;
-  height: 100%;
-  transition: all 0.5s ease;
-  border-radius: 50rem;
-  z-index: 1;
-}
-.design-button a:hover::before {
-  left: 0;
-}
-.design-button a:hover {
-    color: var(--blue);
-}
-/* Header Css End */
-/* Banner Css Start */
-.banner-section {
-  height: 100vh;
-  background-position: center;
-  background-image: url(../image/banner.jpg);
-  background-size: cover;
-}
-.banner-section::before {
-  content: "";
-  position: absolute;
-  background: linear-gradient(0deg, black, transparent);
-  height: 100%;
-  width: 100%;
+  background: var(--blue);
 }
 
-.bettwr
-/* Banner Css End */
+/* Section 1 Css Start */
 
 .section-1 {
   background: var(--green);
+}
+
+.img-box {
+    border-radius: 20px;
 }
 
 .box-content {
@@ -160,6 +138,15 @@ h6 {
   transform: scale(1.5);
 }
 
+/* Section 1 Css End */
+
+.design-get{
+  background-color: var(--blue);
+}
+
+/* Section 2 Css Start */
+
+
 .section-2 {
   margin-top: 90px;
 }
@@ -169,31 +156,53 @@ h6 {
 .mobile-content h3 {
   font-size: 45px;
 }
+/* Section 2 Css end */
 
-.choose {
-  margin-left: 90px;
+.section-3 {
+    background-color: #f8f9fa; /* Light background */
+    position: relative;
+}
+
+.project img{
+  width: 15%;
+}
+.choose{
+  padding-left: 25%;
+}
+
+.choose-main {
+    border-radius: 15px;
+}
+
+.choose-img img {
+    border-radius: 15px;
+    transition: transform 0.4s ease;
+}
+
+.choose-main:hover .choose-img img {
+    transform: scale(1.5);
 }
 
 .project {
-  background: var(--blue);
-  width: 13%;
-  bottom: -320%;
-  left: 42%;
-}
-.choose-img:hover {
-  transform: scale(1.5);
-}
-.choose-img {
-  transition: all 0.5s ease;
+  background-color: var(--blue);
+  bottom: 40%;
+  left: 43%;
 }
 
-.section-3 {
-  background-color: rgba(249, 249, 249, 1);
+.mobile-content.choose li img {
+    width: 24px;
+    height: 24px;
+}
+/* Section 5 Css Start */
+
+.what{
+  width: 37%;
 }
 
 .client-img img {
   width: 60px;
   height: 60px;
+  object-fit: cover;
   border-radius: 50%;
 }
 
@@ -231,6 +240,9 @@ a.faq:hover {
   height: 100%;
   padding: 10px 15px;
 }
+a.footer-design-a{
+  width: 11%;
+}
 
 .footer-menu a:hover {
   margin-left: 10px;
@@ -252,28 +264,12 @@ a.faq:hover {
   background-image: url(../image/about-banner.jpg);
 }
 
-.banner-section-about::before {
-  content: "";
-  position: absolute;
-  background: linear-gradient(0deg, black, transparent);
-  height: 70%;
-  width: 100%;
-}
 .about-section {
   background: url(../image/app.jpg);
   height: 90vh;
   background-position: center;
   background-size: cover;
 }
-.about-section::before {
-  content: "";
-  position: absolute;
-  background: #000000ba;
-  height: 70%;
-  width: 100%;
-  opacity: 0.5;
-}
-
 /* SERVICES CSS START */
 
 .box-content-5 {
@@ -313,28 +309,12 @@ a.faq:hover {
   background-image: url(../image/portfolio.jpg);
 }
 
-.banner-section-portfolio::before {
-  content: "";
-  position: absolute;
-  background: #000000ba;
-  height: 67%;
-  width: 100%;
-}
-
 /* CONTACT-US CSS START */
 
 .banner-section-af {
   padding: 200px 0px;
   background-size: cover;
   background-image: url(../image/af.jpg);
-}
-
-.banner-section-af::before {
-  content: "";
-  position: absolute;
-  background: #000000ba;
-  height: 67%;
-  width: 100%;
 }
 
 .form input {
