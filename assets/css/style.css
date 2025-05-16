@@ -52,7 +52,9 @@ h6 {
   background: var(--blue);
 }
 /* Header Css Start */
-
+header {
+  z-index: 1;
+}
 .design-menu ul li a::before{
     content: "";
     position: absolute;
@@ -84,11 +86,11 @@ h6 {
     border-radius: 20px;
 }
 .design-button a:hover::before {
-    left: 0;
+  left: 0;
 }
 
 .design-button a{
-  background: var(--blue);
+  background-color: var(--blue);
 }
 /* Header Css End */
 /* banner section css Start */
@@ -98,11 +100,20 @@ h6 {
     background-image: url(../image/banner.jpg);
     background-size: cover;
 }
-
-
+.banner-section::before{
+  width: 100%;
+  height: 100%;
+  content: '';
+  position: absolute;
+  background-color: black;
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+}
 .banner-content h1 span{
   color: transparent;
   -webkit-text-stroke: 2px white;
+  z-index: 1;
 }
 /* banner section css end */
 
@@ -118,22 +129,33 @@ h6 {
 }
 
 .box-content {
-  bottom: -77%;
-  left: 9.5%;
+  bottom: -83%;
+  left: 9.2%;
 }
 .box-content-2 {
-  bottom: -77%;
-  left: 35%;
+  bottom: -83%;
+  left: 34%;
 }
 .box-content-3 {
-  bottom: -77%;
-  left: 57%;
+  bottom: -83%;
+  left: 56%;
 }
 .box-content-4 {
-  bottom: -77%;
+  bottom: -83%;
   left: 80%;
 }
-
+.box-content-5 {
+  bottom: -93%;
+  left: 9.2%;
+}
+.box-content-6 {
+  bottom: -83%;
+  left: 34%;
+}
+.box-content-7 {
+  bottom: -83%;
+  left: 56%;
+}
 .image {
   transition: all 0.5s ease;
 }
@@ -151,7 +173,7 @@ h6 {
   width: 100%;
 }
 .image:hover {
-  transform: scale(1.5);
+  transform: scale(1.1);
 }
 
 /* Section 1 Css End */
@@ -162,12 +184,16 @@ h6 {
 
 /* Section 2 Css Start */
 
-
+.mobile-img img{
+  width: 85%;
+}
 .section-2 {
   margin-top: 90px;
 }
 .mobile-content {
   margin-top: 90px;
+  width: 95%;
+
 }
 .mobile-content h3 {
   font-size: 45px;
@@ -196,7 +222,7 @@ h6 {
 }
 
 .choose-main:hover .choose-img img {
-    transform: scale(1.5);
+    transform: scale(1.1);
 }
 
 .project {
@@ -210,14 +236,52 @@ h6 {
     height: 24px;
 }
 /* Section 4 Css Start */
+.our-img-1 img{
+  height: 256px;
+  object-fit: cover;
+}
+.our-img-2 img{
+  height: 527px;
+  object-fit: cover;
+}
+.our-img-3 img{
+  height: 543px;
+  object-fit: cover;
+}
+.our-img-4 img{
+  height: 240px;
+  object-fit: cover;
+}
+.our-img-5 img{
+  height: 262px;
+  object-fit: cover;
+}
+.our-img-6 img{
+  height: 523px;
+  object-fit: cover;
+}
+.our-img img{
+  border-radius: 20px;
+}
 
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    color: black;
+    background-color: #fff;
+}
+.nav-link {
+    color: gray;
+    font-size: 20px;
+}
+.nav-link:hover{
+  color: gray;
+}
 .design-button-2 a::before{
     content: "";
     position: absolute;
     left: -100%;
     width: 100%;
     bottom: 0;
-    height: 40px;
+    height: 55px;
     background-color: black;
     transition: all 0.5s ease;
     border-radius: 20px;
@@ -246,10 +310,22 @@ h6 {
 }
 
 .client-box-slider {
+  transition: all 0.5s ease;
   background-color: rgba(249, 249, 249, 1);
   border-radius: 20px;
 }
 
+.client-box-slider:hover {
+    background-color: var(--blue);
+}
+
+.client-box-slider:hover h4{
+    color: white;
+}
+
+.client-box-slider:hover p{
+    color: white;
+}
 .section-6 {
   background-color: rgba(249, 249, 249, 1);
 }
@@ -260,6 +336,8 @@ h6 {
 
 .how input {
   background-color: #d9d9d9;
+  outline: none;
+  width: 65%;
 }
 a.how-2:hover {
   background: black;
@@ -268,6 +346,21 @@ a.faq:hover {
   color: black;
 }
 
+a.faq{
+  color: var(--blue);
+}
+
+/* Footer Css Start */
+.footer::before{
+  width: 100%;
+  height: 100%;
+  content: '';
+  position: absolute;
+  background-color: black;
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+}
 .footer {
   background-image: url(../image/footer-bg.jpg);
   height: 100vh;
@@ -294,65 +387,47 @@ a.footer-design-a{
 }
 
 /* About-Us CSS Start */
+
+.better h1{
+  font-size: 80px;
+  z-index: 2;
+}
+.about-section::before{
+  width: 100%;
+  height: 100%;
+  content: '';
+  position: absolute;
+  background-color: black;
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+}
 .who h6 {
   width: 22%;
 }
 .banner-section-about {
-  padding: 200px 0px;
-  background-size: cover;
   background-image: url(../image/about-banner.jpg);
 }
-
 .about-section {
-  background: url(../image/app.jpg);
-  height: 90vh;
-  background-position: center;
+  background-image: url(../image/app.jpg);
   background-size: cover;
 }
+.index{
+  z-index: 2;
+}
+
 /* SERVICES CSS START */
 
-.box-content-5 {
-  bottom: -45%;
-  left: 9.5%;
-}
-.box-content-6 {
-  bottom: -45%;
-  left: 35%;
-}
-.box-content-7 {
-  bottom: -45%;
-  left: 57%;
-}
-.box-content-8 {
-  bottom: -45%;
-  left: 80%;
-}
-.box-content-9 {
-  bottom: -100%;
-  left: 17%;
-}
-.box-content-10 {
-  bottom: -100%;
-  left: 41%;
-}
-.box-content-11 {
-  bottom: -100%;
-  left: 65%;
-}
 
 /* PORFOLIO CSS START */
 
 .banner-section-portfolio {
-  padding: 200px 0px;
-  background-size: cover;
   background-image: url(../image/portfolio.jpg);
 }
 
 /* CONTACT-US CSS START */
 
 .banner-section-af {
-  padding: 200px 0px;
-  background-size: cover;
   background-image: url(../image/af.jpg);
 }
 
