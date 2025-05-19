@@ -69,11 +69,9 @@ header {
 .design-menu ul li a:hover::before {
     left: 0;
 }
-
 .banner-content h1{
   font-size: 80px;
 }
-
 .design-button a::before{
     content: "";
     position: absolute;
@@ -84,17 +82,20 @@ header {
     background-color: white;
     transition: all 0.5s ease;
     border-radius: 20px;
+    z-index: -1;
 }
 .design-button a:hover::before {
   left: 0;
 }
-
 .design-button a{
   background-color: var(--blue);
+  z-index: 1;
+}
+.design-button a:hover {
+  color: var(--blue) !important;
 }
 /* Header Css End */
 /* banner section css Start */
-
 .banner-section{
     height: 100vh;
     background-image: url(../image/banner.jpg);
@@ -113,60 +114,23 @@ header {
 .banner-content h1 span{
   color: transparent;
   -webkit-text-stroke: 2px white;
-  z-index: 1;
 }
 /* banner section css end */
-
-
 /* Section 1 Css Start */
-
 .section-1 {
   background: var(--green);
 }
-
-.img-box {
+.image img{
     border-radius: 20px;
+    transition: all 0.5s ease;
 }
-
 .box-content {
-  bottom: -83%;
-  left: 9.2%;
+  bottom: 8%;
+  left: 0;
 }
-.box-content-2 {
-  bottom: -83%;
-  left: 34%;
-}
-.box-content-3 {
-  bottom: -83%;
-  left: 56%;
-}
-.box-content-4 {
-  bottom: -83%;
-  left: 80%;
-}
-.box-content-5 {
-  bottom: -93%;
-  left: 9.2%;
-}
-.box-content-6 {
-  bottom: -83%;
-  left: 34%;
-}
-.box-content-7 {
-  bottom: -83%;
-  left: 56%;
-}
-.image {
-  transition: all 0.5s ease;
-}
-
-.image img {
-  border-radius: 25px;
-}
-
-.image::before {
+.img-box::before {
   content: "";
-  border-radius: 25px;
+  border-radius: 20px;
   position: absolute;
   background: linear-gradient(0deg, black, transparent);
   height: 100%;
@@ -178,62 +142,43 @@ header {
 
 /* Section 1 Css End */
 
-.design-get{
-  background-color: var(--blue);
-}
-
 /* Section 2 Css Start */
 
 .mobile-img img{
-  width: 85%;
+  padding-left: 100px;
 }
 .section-2 {
   margin-top: 90px;
 }
-.mobile-content {
-  margin-top: 90px;
-  width: 95%;
-
-}
 .mobile-content h3 {
   font-size: 45px;
 }
+.mobile-img-2 img {
+  padding-right: 100px;
+}
 /* Section 2 Css end */
-
 .section-3 {
     background-color: #f8f9fa; /* Light background */
-    position: relative;
 }
 
-.project img{
+.project {
+  top: 50%;
+  right: 0%;
+  transform: translate(50% , -50%);
+  background-color: var(--blue);
+}
+.project img {
   width: 15%;
 }
 .choose{
-  padding-left: 25%;
+  padding-left: 120px;
 }
-
-.choose-main {
-    border-radius: 15px;
-}
-
 .choose-img img {
     border-radius: 15px;
     transition: transform 0.4s ease;
 }
-
 .choose-main:hover .choose-img img {
     transform: scale(1.1);
-}
-
-.project {
-  background-color: var(--blue);
-  bottom: 40%;
-  left: 43%;
-}
-
-.mobile-content.choose li img {
-    width: 24px;
-    height: 24px;
 }
 /* Section 4 Css Start */
 .our-img-1 img{
@@ -317,6 +262,8 @@ header {
 
 .client-box-slider:hover {
     background-color: var(--blue);
+    cursor: grab;
+
 }
 
 .client-box-slider:hover h4{
@@ -415,11 +362,16 @@ a.faq{
 }
 .footer {
   background-image: url(../image/footer-bg.jpg);
-  height: 100vh;
   background-repeat: no-repeat;
 }
-
+.footer-design,
+.footer-menu,
+.copy {
+  position: relative;
+  z-index: 2;
+}
 .footer a {
+  color: #fff !important ;
   width: 100%;
   height: 100%;
   padding: 10px 15px;
@@ -429,8 +381,8 @@ a.footer-design-a{
 }
 
 .footer-menu a:hover {
-  margin-left: 10px;
-  color: var(--blue);
+  margin-left: 10px !important;
+  color: var(--blue) !important;
 }
 
 .footer-menu a {
@@ -463,9 +415,6 @@ a.footer-design-a{
 .about-section {
   background-image: url(../image/app.jpg);
   background-size: cover;
-}
-.index{
-  z-index: 2;
 }
 
 /* SERVICES CSS START */
