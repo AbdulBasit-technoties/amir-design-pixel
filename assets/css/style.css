@@ -120,23 +120,33 @@ header {
 .section-1 {
   background: var(--green);
 }
-.image img{
-    border-radius: 20px;
-    transition: all 0.5s ease;
-}
 .box-content {
   bottom: 8%;
   left: 0;
 }
 .img-box::before {
   content: "";
-  border-radius: 20px;
   position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 20px;
   background: linear-gradient(0deg, black, transparent);
   height: 100%;
   width: 100%;
+  z-index: 1;
 }
-.image:hover {
+.box-content {
+  z-index: 2;
+} 
+.img-box{
+  border-radius:20px;
+} 
+.img-box .image img {
+  border-radius:20px ;
+  transition: transform 0.5s ease;
+}
+
+.img-box:hover .image img {
   transform: scale(1.1);
 }
 
@@ -157,29 +167,13 @@ header {
   padding-right: 100px;
 }
 /* Section 2 Css end */
-.section-3 {
-    background-color: #f8f9fa; /* Light background */
-}
 
-.project {
-  top: 50%;
-  right: 0%;
-  transform: translate(50% , -50%);
-  background-color: var(--blue);
+/* Section-3 Css Start */
+.section-3 {
+  margin-top: 90px;
 }
-.project img {
-  width: 15%;
-}
-.choose{
-  padding-left: 120px;
-}
-.choose-img img {
-    border-radius: 15px;
-    transition: transform 0.4s ease;
-}
-.choose-main:hover .choose-img img {
-    transform: scale(1.1);
-}
+/* Section-3 Css End */
+
 /* Section 4 Css Start */
 .our-img-1 img{
   height: 256px;
@@ -230,18 +224,48 @@ header {
     background-color: black;
     transition: all 0.5s ease;
     border-radius: 20px;
+    z-index: -1;
+}
+.design-button-2 a{
+  background-color: var(--blue);
+  z-index: 1;
+}
+.design-button-2 a:hover {
+  color: #fff !important;
 }
 .design-button-2 a:hover::before {
     left: 0;
 }
-.design-button-2 a{
-  background: var(--blue);
-}
 /* Section 4 Css end */
 
+/* Section 5 Css Start */
+.section-5 {
+    background-color: #f8f9fa; /* Light background */
+}
+
+.project {
+  top: 50%;
+  right: 0%;
+  transform: translate(50% , -50%);
+  background-color: var(--blue);
+}
+.project img {
+  width: 15%;
+}
+.choose{
+  padding-left: 120px;
+}
+.choose-img img {
+    border-radius: 15px;
+    transition: transform 0.4s ease;
+}
+.choose-main:hover .choose-img img {
+    transform: scale(1.1);
+}
 
 
 /* Section 5 Css Start */
+/* Section 6 Css Start */
 
 .what{
   width: 37%;
@@ -273,9 +297,9 @@ header {
 .client-box-slider:hover p{
     color: white;
 }
-
-/* Section 6 Start */
-.section-6 {
+/* Section 6 Css End */
+/* Section 7 Start */
+.section-7 {
   background-color: rgba(249, 249, 249, 1);
 }
 
@@ -404,6 +428,7 @@ a.footer-design-a{
   background-color: black;
   opacity: 0.5;
   top: 0;
+  z-index: -1;
   left: 0;
 }
 .who h6 {
@@ -413,6 +438,7 @@ a.footer-design-a{
   background-image: url(../image/about-banner.jpg);
 }
 .about-section {
+  z-index: 1;
   background-image: url(../image/app.jpg);
   background-size: cover;
 }
