@@ -549,3 +549,85 @@ a.form-register {
 .sidebar{
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.open-menu{
+  position: relative;
+}
+
+.design-img img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Hide nav menu on small screens, show hamburger */
+@media (max-width: 991.98px) {
+
+  .img-box{
+    width: 100%;
+  }
+
+  .mobile-content h3{
+    font-size: 35px;
+  }
+  .mobile-content p{
+    font-size: 16px !important;
+  }
+  .mobile-img img,
+  .mobile-img-2 img{
+    padding: 23px ;
+  }
+  .content h3{
+    font-size: 38px;
+  }
+  .choose{
+    margin-top: 20px;
+    padding: 0px;
+  }
+  .how {
+    margin-left: 0px !important;
+  }
+}
+
